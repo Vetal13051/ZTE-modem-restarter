@@ -54,6 +54,10 @@ void ModemRestarter::DeviceInfoReplyFinished(QNetworkReply *reply)
 			 }
         }
     }
+	else
+	{
+        QCoreApplication::exit(0);
+	}
 
     reply->deleteLater();
 }
@@ -71,6 +75,10 @@ void ModemRestarter::RestartReplyFinished(QNetworkReply *reply)
             QCoreApplication::exit(0);
         }
     }
+	else
+	{
+        QCoreApplication::exit(0);
+	}
 
     reply->deleteLater();
 }
