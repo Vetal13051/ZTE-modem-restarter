@@ -28,7 +28,7 @@ void ModemRestarter::DeviceInfoReplyFinished(QNetworkReply *reply)
 
         if ((pos = rx.indexIn(data, pos)) != -1) {
              data = rx.cap(2);
-             if (data.compare("0.0.0.0") != 0)
+             if (data.compare("0.0.0.0") == 0)
              {
 				 QByteArray postData;
 				 QUrl params;
