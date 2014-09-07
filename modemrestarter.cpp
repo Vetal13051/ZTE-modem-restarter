@@ -48,6 +48,10 @@ void ModemRestarter::DeviceInfoReplyFinished(QNetworkReply *reply)
 
                  manager->post(request, postData);
              }
+			 else
+			 {
+                QCoreApplication::exit(0);
+			 }
         }
     }
 
